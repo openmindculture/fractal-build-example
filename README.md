@@ -53,6 +53,15 @@ arrow--right.hbs
 arrow--left.hbs
 ```
 
+Add `collated: true` to the configuration, to automatically display all variants on one overview page.
+
+
+### Compound Components Using Assets
+
+To add assets, like CSS, JS, and image files to a component, it must be a **compound component**, i.e.
+all files are saved in a sub-folder that matches the component's name.
+Compound components can have variants.
+
 ### Configuration Files
 
 You can use JSON or YAML for configuration.
