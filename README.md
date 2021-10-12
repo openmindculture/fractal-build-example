@@ -42,6 +42,17 @@ text-example/text-example.hbs
 <p>{{ text }}</p>
 ```
 
+### Variants
+
+Variants are created by adding `--` and a name suffix.
+Variants share the parent context by default.
+
+```
+arrow.hbs
+arrow--right.hbs
+arrow--left.hbs
+```
+
 ### Configuration Files
 
 You can use JSON or YAML for configuration.
