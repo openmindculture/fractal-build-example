@@ -33,7 +33,8 @@ https://fractal.build/guide/getting-started.html#the-tl-dr-method
 
 ## Components
 
-Each component consists of a folder/directory with the same name as the file name and handle.
+A component usually consists of a markup and a configuration.
+The name should match the handle (technical name).
 
 text-example/text-example.hbs
 
@@ -41,7 +42,13 @@ text-example/text-example.hbs
 <p>{{ text }}</p>
 ```
 
-The handle has to be defined in the `name.config.yml` to use the component inside other components.
+### Configuration Files
+
+You can use JSON or YAML for configuration.
+
+We chose YAML because it might be easier to maintain for "non-technical" collaborators.
+
+The handle has to be defined in the configuration to use the component inside other components.
 The name will be used to display title and label.
 Default text for handlebars variables can be defined in the configuration context.
 
@@ -60,9 +67,38 @@ You can use this example component inside of another component by referencing th
 <div>{{> @text-example }}</div>
 ```
 
-## Folder Structure 
+## Folder Structure: Collections
 
-TODO how to organize projects in sub-folders?
+Components can be grouped in folders to form a **collection**.
+
+```
+components
+components/arrows
+components/arrows/right-arrow.hbs
+components/arrows/right-arrow.json
+```
+
+Files inside the same folder can also have a shared configuration.
+
+```
+components/arrows/arrows.json
+components/arrows/left-arrow.hbs
+components/arrows/right-arrow.hbs
+```
+
+`components` defines components in handlebars markup (`.hbs`),
+`pages` defines pages in markdown (`.md`).
+
+### Ordering
+
+You can prefix file names by numbers to order pages.
+The numbers will be ignored, except for ordering.
+
+```
+pages/01-index.md
+pages/02-about-us.md
+pages/03-jobs.md
+```
 
 ## Global Styles and Component Styles
 

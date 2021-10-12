@@ -1,3 +1,4 @@
 title: Example component
+handle: example-component
 context:
     text: This is an example component!
