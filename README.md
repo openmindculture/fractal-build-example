@@ -60,7 +60,14 @@ Add `collated: true` to the configuration, to automatically display all variants
 
 To add assets, like CSS, JS, and image files to a component, it must be a **compound component**, i.e.
 all files are saved in a sub-folder that matches the component's name.
-Compound components can have variants.
+Compound components can have variants, for example
+
+```
+color-arrow/color-arrow-left.hbs
+color-arrow/color-arrow-left.hbs
+color-arrow/color-arrow-left.hbs
+color-arrow/color-arrow-left.hbs
+```
 
 ### Configuration Files
 
@@ -72,7 +79,7 @@ The handle has to be defined in the configuration to use the component inside ot
 The name will be used to display title and label.
 Default text for handlebars variables can be defined in the configuration context.
 
-text-example/text-example.yml
+text-example/text-example.config.yml
 
 ```
 name: text example
@@ -95,13 +102,13 @@ Components can be grouped in folders to form a **collection**.
 components
 components/arrows
 components/arrows/right-arrow.hbs
-components/arrows/right-arrow.json
+components/arrows/right-arrow.config.yml
 ```
 
 Files inside the same folder can also have a shared configuration.
 
 ```
-components/arrows/arrows.json
+components/arrows/arrows.config.yml
 components/arrows/left-arrow.hbs
 components/arrows/right-arrow.hbs
 ```
@@ -126,6 +133,13 @@ TODO how to define and apply global styles, e.g. base font and colors
 
 TODO how to define component styles
 
+### Postprocessing
+
+Optionally, PostCSS (or SASS) can be configured.
+
+TODO use PostCSS so that we can use custom properties ("CSS variables")
+to define corporate colors etc. and transpile them to static CSS output
+
 ### Linting and Coding Standards
 
 We will use prettier, eslint, stylelint, and editorconfig
@@ -142,3 +156,11 @@ but there there are editor extensions like
 * TODO edit .editorconfig according to agency style guide
 * TODO configure stylelint
 * TODO configure eslint
+
+## Preview Theme
+
+The preview UI is built upon themes and can be customized.
+
+TODO customize theme an use customers' colors if easily possible
+
+https://fractal.build/guide/web/default-theme.html#configuration
