@@ -1,5 +1,15 @@
 {
+  "name": "fractal-build-example",
+  "version": "0.0.1",
+  "description": "evaluation fractal as an atomic design tool",
+  "todo": "main, scripts",
   "dependencies": {
     "@frctl/fractal": "^1.5.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
