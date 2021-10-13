@@ -1,17 +1,20 @@
-# fractal-build-example
-evaluation of fractal.build atomic design pattern tool
+# Fractal.build Setup
 
 ## Installation
 
 Requirements: node / npm.
 
-`npm install`
+```
+npm install
+```
 
 For development, you might also want to install the fractal command line interface
 
-`npm i -g @frctl/fractal`
+```
+npm i -g @frctl/fractal
+```
 
-Start development server:
+## Start preview server
 
 ```
 cd example-project
@@ -21,16 +24,36 @@ fractal start
 Browse to the 'Local URL' displayed in your terminal to view your component library, usually
 http://localhost:3000
 
-Note that the optional `--sync` option did not work when I first tried the fractal setup.
-But without sync, do we need to restart the server after every code change?
+## How to Browse and Copy the Code
+
+Browse components and use the HTML/View tabs to see rendered HTML or markup code.
+
+**TODO** add screenshot
+
+## Development
+
+### Customizing the Preview UI Theme
+
+The preview UI is built upon themes and can be customized:
+
+https://fractal.build/guide/web/default-theme.html#configuration
+
+### Setting Up the Development Environment
+
+*Note that the optional `--sync` option did not work when I first tried the fractal setup.
+But without sync, do we need to restart the server after every code change?*
+
 TODO: how to configure a file watcher?
 
-### Further reading:
+Further reading:
 
 https://fractal.build/guide/installation.html#installing-fractal-in-your-project
 
 https://fractal.build/guide/getting-started.html#the-tl-dr-method
 
+### Working with Components
+
+**TODO** add screenshot, elaborate on examples
 ## Components
 
 A component usually consists of a markup and a configuration.
@@ -157,10 +180,3 @@ but there there are editor extensions like
 * TODO configure stylelint
 * TODO configure eslint
 
-## Preview Theme
-
-The preview UI is built upon themes and can be customized.
-
-TODO customize theme an use customers' colors if easily possible
-
-https://fractal.build/guide/web/default-theme.html#configuration
