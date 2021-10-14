@@ -21,6 +21,12 @@ cd example-project
 fractal start
 ```
 
+or with a gulp or webpack setup, use the default task:
+
+```
+gulp
+```
+
 Browse to the 'Local URL' displayed in your terminal to view your component library, usually
 http://localhost:3000
 
@@ -40,11 +46,6 @@ https://fractal.build/guide/web/default-theme.html#configuration
 
 ### Setting Up the Development Environment
 
-*Note that the optional `--sync` option did not work when I first tried the fractal setup.
-But without sync, do we need to restart the server after every code change?*
-
-TODO: how to configure a file watcher?
-
 Further reading:
 
 https://fractal.build/guide/installation.html#installing-fractal-in-your-project
@@ -52,8 +53,6 @@ https://fractal.build/guide/installation.html#installing-fractal-in-your-project
 https://fractal.build/guide/getting-started.html#the-tl-dr-method
 
 ### Working with Components
-
-**TODO** add screenshot, elaborate on examples
 ## Components
 
 A component usually consists of a markup and a configuration.
@@ -152,31 +151,35 @@ pages/03-jobs.md
 
 ## Global Styles and Component Styles
 
-TODO how to define and apply global styles, e.g. base font and colors
+Use SCSS syntax.
 
-TODO how to define component styles
+Styles will be compiled using SASS.
 
-### Postprocessing
+All styles will be imported from `components/assets/scss/global.scss`
 
-Optionally, PostCSS (or SASS) can be configured.
+* `global.scss` is the base file
+* `helpers.scss` defines breakpoint mixins etc.
+* `variables.scss` defines project variables like $brand-primary color
 
-TODO use PostCSS so that we can use custom properties ("CSS variables")
-to define corporate colors etc. and transpile them to static CSS output
+All component styles will be imported from `components/**/*.scss` and processed into one combined css file (`public/css/global.css`) which is used by `components/_preview.hbs`.
 
 ### Linting and Coding Standards
 
 We will use prettier, eslint, stylelint, and editorconfig
 to maintain a concise, clean, and modern code base.
 
-Recommended to install and activate tool support in your IDE.
+We recommend that you install and activate tool support in your IDE.
 
 Handlebars `.hbs` markup is currently not supported by prettier by default,
 but there there are editor extensions like
-[Prettier for Handlebars for VisualStudio Code](https://marketplace.visualstudio.com/items?itemName=EmberTooling.prettier-for-handlebars-vscode)
+[Prettier for Handlebars for VisualStudio Code](https://marketplace.visualstudio.com/items?itemName=EmberTooling.prettier-for-handlebars-vscode):
 
-`ext install EmberTooling.prettier-for-handlebars-vscode`
+```
+ext install EmberTooling.prettier-for-handlebars-vscode
+```
 
-* TODO edit .editorconfig according to agency style guide
-* TODO configure stylelint
-* TODO configure eslint
+## References
 
+* [Rachel Andrew: Pattern Library First: an Approach For Managing CSS](https://www.smashingmagazine.com/2018/07/pattern-library-first-css/)
+
+* [Bootstrap Breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/)
