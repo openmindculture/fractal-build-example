@@ -1,0 +1,13 @@
+@import './helpers.scss';
+@import './variables.scss';
+@import "../../../components/**/*.scss";
+
+body {
+  background-color: $background-primary;
+  font-family: Helvetica, Verdana, sans-serif;
+  color: $grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $brand-primary;
+}
