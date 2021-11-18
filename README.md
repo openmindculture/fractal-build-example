@@ -1,5 +1,17 @@
 # Fractal.build Setup
 
+## TODO
+
+* use atomic design folder structure
+* fix linter configurations
+* configure static build target
+* configure PostCSS and JS import
+* configure github page for demo output
+* integrate codecept.io for screenshots and code snapshots
+* add more complex examples for nested components
+* add example page using multiple components
+* update documentation and credits
+
 ## Installation
 
 Requirements: node / npm.
