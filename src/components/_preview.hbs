@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ path '/css/global.css' }}">
-    <title>Example Project</title>
+    <!-- TODO how to use generated names with webpack contenthash? -->
+    <link rel="stylesheet" href="{{path '/css/global.css'}}">
+    <script type="text/javascript" src="{{path '/scripts/main.js'}}"></script>
+    <title>Renamed Customer Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-{{{ yield }}}
-
+{{{yield}}}
 </body>
 </html>

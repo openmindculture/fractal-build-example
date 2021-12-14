@@ -1,15 +1,50 @@
 {
-  "name": "fractal-build-example",
-  "version": "0.0.1",
-  "description": "evaluation fractal as an atomic design tool",
-  "todo": "main, scripts",
+  "name": "renamed-customer-project",
+  "version": "0.1.0",
+  "description": "Renamed Customer Project",
+  "scripts": {
+    "dev": "webpack --config webpack.dev.js --watch --progress",
+    "webpack-build": "webpack --config webpack.prod.js",
+    "build": "npm run webpack-build && npm run fractal-build",
+    "fractal-build": "fractal build",
+    "stylelint": "stylelint ./src/assets/scss/**/*.scss --fix",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "eslint": "eslint ./src",
+    "eslint-fix": "npm run eslint -- --fix"
+  },
+  "husky": {
+    "pre-commit": "npm run build"
+  },
   "dependencies": {
-    "@frctl/fractal": "^1.5.11"
+    "@frctl/fractal": "^1.5.11",
+    "@frctl/mandelbrot": "^1.9.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "eslint-loader": "^4.0.2",
+    "fractal-webpack-plugin": "^4.1.0",
+    "import-glob": "^1.5.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "path": "^0.12.7",
+    "stylelint-scss": "^3.21.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
+    "css-loader": "^6.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "file-loader": "^6.2.0",
+    "import-glob-loader": "^1.1.0",
+    "node-sass": "^6.0.1",
     "prettier": "2.4.1",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
     "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-config-standard": "^22.0.0"
   }
 }
