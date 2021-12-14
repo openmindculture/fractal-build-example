@@ -14,11 +14,7 @@ module.exports = fractal;
  * Give your project a title.
  * Remove the customer's name while working in a public place!
  */
-<<<<<<< HEAD
-fractal.set('project.title', 'Fractal Design System Example');
-=======
 fractal.set('project.title', 'Renamed Customer Project');
->>>>>>> 2665fa7 (add customer webpack configuration)
 
 /*
  * Tell Fractal where to look for components.
