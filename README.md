@@ -1,5 +1,7 @@
 # Fractal.build Setup
 
+See [branch customer-webpack-setup](https://github.com/openmindculture/fractal-build-example/tree/customer-webpack-setup) for webpack setup example.
+
 ## TODO
 
 * use atomic design folder structure
