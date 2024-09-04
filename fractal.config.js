@@ -22,6 +22,11 @@ fractal.set('project.title', 'Fractal Design System Example');
 fractal.components.set('path', path.join(__dirname, 'src/components'));
 
 /*
+ * collate in rendered previews
+ */
+fractal.components.set('default.collated', true);
+
+/*
  * Tell Fractal where to look for documentation pages.
  */
 fractal.docs.set('path', path.join(__dirname, 'src/docs'));
@@ -51,4 +56,5 @@ const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
   information: [{ }],
 });
+myCustomisedTheme.addStatic(__dirname + '/themes/myCustomisedTheme');
 fractal.web.theme(myCustomisedTheme);
