@@ -31,7 +31,6 @@ npm i -g @frctl/fractal
 ## Start preview server
 
 ```
-cd example-project
 fractal start
 ```
 
